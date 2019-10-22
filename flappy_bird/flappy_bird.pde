@@ -14,6 +14,7 @@ void draw() {
   b.render();
   b.update();
   p.render();
+  p.update();
 }
 
 void keyPressed() {
