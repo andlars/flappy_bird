@@ -16,8 +16,10 @@ class Bird {
 
   // Afbild fuglen ved dens nuværende position
   void render() {
-    fill(255);
+    fill(255, 255, 255, 0);
     ellipse(x, y, s, s);
+    imageMode(CENTER);
+    image(redbird, x, y, s-10, s); 
   }
 
   // Opdater fuglens position
