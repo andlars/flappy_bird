@@ -23,6 +23,7 @@ void draw() {
 
 void keyPressed() {
   if (key == ' ') {
+    b.dy = 0;
     b.flap();
   }
 }
