@@ -3,6 +3,7 @@ class Bird {
   float dy, ddy; // Fuglens hastighed og acceleration
   float s; // Fuglens størrelse
   boolean ready2flap;
+  PImage fugl;
 
   // Constructor til nye fugle
   Bird() {
@@ -12,12 +13,15 @@ class Bird {
     ddy = 0.3;
     s = 50;
     ready2flap = true;
+    fugl = loadImage("fugl.png");
   }
 
   // Afbild fuglen ved dens nuværende position
   void render() {
     fill(255);
     ellipse(x, y, s, s);
+    imageMode(CENTER);
+    image(fugl, x, y);
   }
 
   // Opdater fuglens position
@@ -25,8 +29,8 @@ class Bird {
     dy += ddy;
     y += dy;
     
-    if (y >= height-s/2) {
-      y = height - s/2;
+    if (y >= height-120) {
+      y = height-s/2;
       dy = 0;
     }
   }
