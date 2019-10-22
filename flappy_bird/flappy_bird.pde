@@ -1,16 +1,18 @@
 Bird b;
 Pipe p;
+PImage img;
 
 void setup() {
   size(500, 800);
   noStroke();
+  img = loadImage("baggrund flappy.png");
 
   b = new Bird();
   p = new Pipe();
 }
 
 void draw() {
-  background(0);
+  image(img,0,0);
   b.render();
   b.update();
   p.render();
