@@ -7,12 +7,13 @@ class Pipe {
 
   // Constructor til nye pipes
   Pipe() {
-    x = width-100;
+    x = width;
     dx = 0;
     w = 30;
-    y = height/2-75;
+    y = random(40, 450);
     h = 150;
   }
+  
 
   // Afbild røret på canvasset
   void render() {
@@ -23,6 +24,9 @@ class Pipe {
 
   // Opdater rørets position
   void update() {
+    if(frameRate >= 0) {
+    x = x - 2;
+    } 
   }
 
   // Metode, der tjekker om røret er

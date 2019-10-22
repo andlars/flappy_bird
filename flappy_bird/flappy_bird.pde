@@ -1,6 +1,7 @@
 Bird b;
 Pipe p;
 PImage img;
+ArrayList<Pipe> Pipes = new ArrayList<Pipe>();
 
 void setup() {
   size(500, 800);
@@ -14,9 +15,19 @@ void setup() {
 void draw() {
   imageMode(CENTER);
   image(img, width/2, height/2);
+  
   b.render();
   b.update();
+  
+  for (Pipe p: Pipes) {
   p.render();
+  p.update();
+  }
+  
+  if (frameCount % 175 == 0) {
+    Pipes.add(new Pipe());
+  }
+ 
 
 
   //Game over når jorden rammes
