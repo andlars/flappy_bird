@@ -8,7 +8,7 @@ class Pipe {
   // Constructor til nye pipes
   Pipe() {
     x = width-100;
-    dx = 0;
+    dx = -2;
     w = 30;
     y = height/2-75;
     h = 150;
@@ -23,6 +23,7 @@ class Pipe {
 
   // Opdater rørets position
   void update() {
+    x += dx;
   }
 
   // Metode, der tjekker om røret er
