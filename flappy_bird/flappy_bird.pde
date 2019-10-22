@@ -16,8 +16,8 @@ void draw() {
   b.render();
   b.update();
   p.render();
-  p.update();
   p2.render();
+  p.update();
   p2.update();
 }
 
