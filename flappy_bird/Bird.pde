@@ -6,7 +6,7 @@ class Bird {
 
   // Constructor til nye fugle
   Bird() {
-    x = 150;
+    x = width/2;
     y = height/2;
     dy = 0;
     ddy = 0.3;
@@ -34,7 +34,7 @@ class Bird {
   // Bask med vingerne
   void flap() {
     if(ready2flap) {
-      dy += -10;
+      dy += -7;
       ready2flap = false;
     }
   }
