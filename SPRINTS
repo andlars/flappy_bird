@@ -1,0 +1,9 @@
+Her tænker jeg bare, at vi skriver eventuelle sprints og opgaver som vi hver især vil tilføje til programmet.
+
+Sprint 1
+Få bolden til at være i midten af canvas
+Få rørene til at bevæge sig mod venste med en passende hastighed
+Reset ved kollosion
+Lave en pointtæller, som tæller op når bolden er igennem røret
+
+Sprint 2
