@@ -29,8 +29,8 @@ class Bird {
     dy += ddy;
     y += dy;
     
-    if (y >= height-s/2) {
-      y = height - s/2;
+    if (y >= height-120) {
+      y = height-s/2;
       dy = 0;
     }
   }
