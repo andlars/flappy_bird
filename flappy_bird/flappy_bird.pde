@@ -12,12 +12,13 @@ void setup() {
 }
 
 void draw() {
-  image(img,0,0);
+  imageMode(CENTER);
+  image(img, width/2, height/2);
   b.render();
   b.update();
   p.render();
-  
-  
+
+
   //Game over når jorden rammes
   if (b.y >= height - b.s/2) {
     frameRate(0);
