@@ -41,7 +41,7 @@ class Bird {
   // Bask med vingerne
   void flap() {
     if(ready2flap) {
-      dy += -7;
+      dy += -6.75;
       ready2flap = false;
     }
   }
