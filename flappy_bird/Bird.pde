@@ -1,9 +1,10 @@
-class Bird {
+  class Bird {
   float x, y; // Fuglens position
   float dy, ddy; // Fuglens hastighed og acceleration
   float s; // Fuglens størrelse
   boolean ready2flap;
   PImage fugl;
+  float rot;
 
   // Constructor til nye fugle
   Bird() {
@@ -14,25 +15,32 @@ class Bird {
     s = 50;
     ready2flap = true;
     fugl = loadImage("fugl.png");
+    rot = 0;
   }
 
   // Afbild fuglen ved dens nuværende position
   void render() {
     fill(255);
-    ellipse(x, y, s, s);
+    translate(x, y);
+    ellipse(0, 0, s, s);
     imageMode(CENTER);
-    image(fugl, x, y);
+   // rotate(radians(rot));
+    image(fugl, 0, 0);
+    //rotate(TWO_PI - radians(rot));
+    translate(-x, -y);
   }
 
   // Opdater fuglens position
   void update() {
     dy += ddy;
     y += dy;
-    
+        
     if (y >= height-120) {
       y = height-s/2;
       dy = 0;
     }
+    
+    //rot = rot + map(dy + ddy, -200, 200, -45, 45);
   }
 
   // Bask med vingerne
@@ -40,6 +48,6 @@ class Bird {
     if(ready2flap) {
       dy += -10;
       ready2flap = false;
-    }
+    } 
   }
 }
