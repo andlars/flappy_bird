@@ -19,9 +19,10 @@ class Bird {
     fill(255, 255, 255, 0);
     ellipse(x, y, s, s);
     imageMode(CENTER);
-    image(redbird, x, y, s-10, s);
+    image(redbird, x, y, s, s);
+    
   }
-
+ 
   // Opdater fuglens position
   void update() {
     dy += ddy;

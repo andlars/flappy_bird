@@ -19,6 +19,9 @@ class Pipe {
     fill(255);
     rect(x, 0, w, y);
     rect(x, y+h, w, height-y-h);
+    imageMode(CORNER);
+    image(greenpipe, x, y+h, w, height-y-h);
+    image(greenpipe2, x, 0, w, y);
   }
 
   // Opdater rørets position
@@ -33,7 +36,7 @@ class Pipe {
   boolean hit(Bird b) {
     return false;
   }
-  
+
   // Metode, der returnerer true, når røret er uden
   // for canvas. Ellers false
   boolean outOfCanvas() {
