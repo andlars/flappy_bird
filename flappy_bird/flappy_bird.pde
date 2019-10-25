@@ -46,7 +46,7 @@ void keyPressed() {
   if (key == ' ') {
     b.flap();
     flaplyd.play(); {
-      flaplyd.amp(0.25);
+      flaplyd.amp(1);
     }
   }
 }
@@ -54,5 +54,6 @@ void keyPressed() {
 void keyReleased() {
   if (!b.ready2flap) {
     b.ready2flap = true;
+    
   }
 }
