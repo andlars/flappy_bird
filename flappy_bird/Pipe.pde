@@ -26,7 +26,7 @@ class Pipe {
     x+= dx;
     if (outOfCanvas() == true) {
       x = width;
-      y = random(150, 650);
+      y = random(200, 575);
     }
   }
 
