@@ -47,7 +47,6 @@ void keyPressed() {
     b.flap();
   //flaplyd.play(); { *LYD*
     //flaplyd.amp(1); *LYD*
-    }
   }
 }
 
