@@ -1,10 +1,10 @@
-// import processing.sound.*; *LYD*
-// SoundFile flaplyd; *LYD*
-
 Bird b;
 Pipe p;
 PImage img;
 ArrayList<Pipe> Pipes = new ArrayList<Pipe>();
+int score = 0;
+// import processing.sound.*; *LYD*
+// SoundFile flaplyd; *LYD*
 
 void setup() {
   size(500, 800);
@@ -29,8 +29,15 @@ void draw() {
 
   if (frameCount % 175 == 0) {
     Pipes.add(new Pipe());
+    if (frameCount % 175 == 0) {
+    score = score + 1;
+    }    
+    if (frameCount < 350) {
+      score = 0;
+    }
   }
 
+  // flaplyd = new SoundFile (this, "flaplyd.mp3"); *LYD*
   // flaplyd = new SoundFile (this, "flaplyd.mp3"); *LYD*
 
   //Game over når jorden rammes
@@ -58,4 +65,10 @@ void keyReleased() {
   if (!b.ready2flap) {
     b.ready2flap = true;
   }
+}
+
+void score() {
+  fill(0);
+  text(score, 230, 150);
+  textSize(50);
 }
