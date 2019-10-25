@@ -52,7 +52,7 @@ void draw() {
   rect(400, 400, width/2, height/2);
   }
   
-  fill(0);
+  fill(255);
   text(score, 230, 150);
   textSize(50);
 }
