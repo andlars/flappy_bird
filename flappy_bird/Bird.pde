@@ -20,7 +20,6 @@ class Bird {
     ellipse(x, y, s, s);
     imageMode(CENTER);
     image(redbird, x, y, s-10, s); 
-    
   }
 
   // Opdater fuglens position
