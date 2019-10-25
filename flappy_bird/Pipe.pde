@@ -22,8 +22,8 @@ class Pipe {
     fill(255, 0, 0, 0);
     rect(x, y+h, w, height-y-h);
     imageMode(CORNER);
-    image(greenpipe, x, y+h, w, height-y-h);
-    image(greenpipe2, x, 0, w, y);
+    image(greenpipe, x, y+h);
+    image(greenpipe2, x, 0);
   }
 
   // Opdater rørets position
