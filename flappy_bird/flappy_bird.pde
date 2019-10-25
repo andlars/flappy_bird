@@ -51,6 +51,10 @@ void draw() {
   if (p.hit(b) == true) {
   rect(400, 400, width/2, height/2);
   }
+  
+  fill(0);
+  text(score, 230, 150);
+  textSize(50);
 }
 
 void keyPressed() {
@@ -65,10 +69,4 @@ void keyReleased() {
   if (!b.ready2flap) {
     b.ready2flap = true;
   }
-}
-
-void score() {
-  fill(0);
-  text(score, 230, 150);
-  textSize(50);
 }
