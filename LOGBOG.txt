@@ -3,3 +3,13 @@ Sprint 1
 Baggrund - Caroline
 Game over når jorden rammes - Tummas
 Fugl i stedet for bold - Dyring
+
+22/10 - 2019: Sprint 1 overstået
+
+25/10 - 2019 
+Sprint 2
+Grønne rør (design) - Dyring
+Bevægende rør der genererer automatisk - Tummas
+Lander på den tegnede jord og ikke bunden af canvas - Caroline
+Rotation af fuglen i forhold til den vej den accelererer - Tummas
+Vingelyd - Dyring
