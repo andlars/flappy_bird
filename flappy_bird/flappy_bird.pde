@@ -1,10 +1,10 @@
-// import processing.sound.*; *LYD*
-// SoundFile flaplyd; *LYD*
-
 Bird b;
 Pipe p;
 PImage img;
 ArrayList<Pipe> Pipes = new ArrayList<Pipe>();
+int score = 0;
+// import processing.sound.*; *LYD*
+// SoundFile flaplyd; *LYD*
 
 void setup() {
   size(500, 800);
@@ -18,21 +18,33 @@ void setup() {
 void draw() {
   imageMode(CENTER);
   image(img, width/2, height/2);
-  
+
   b.render();
   b.update();
-  
-  for (Pipe p: Pipes) {
-  p.render();
-  p.update();
+
+  for (Pipe p : Pipes) {
+    p.render();
+    p.update();
   }
-  
+
   if (frameCount % 175 == 0) {
     Pipes.add(new Pipe());
+    if (frameCount % 175 == 0) {
+    score = score + 1;
+    }    
+    if (frameCount < 350) {
+      score = 0;
+    }
   }
- 
- // flaplyd = new SoundFile (this, "flaplyd.mp3"); *LYD*
- 
+
+  if (score <= 0) {
+    score = 0;
+  }
+
+  // flaplyd = new SoundFile (this, "flaplyd.mp3"); *LYD*
+
+  score();
+
   //Game over når jorden rammes
   if (b.y >= height - b.s/2) {
     frameRate(0);
@@ -45,7 +57,7 @@ void draw() {
 void keyPressed() {
   if (key == ' ') {
     b.flap();
-  //flaplyd.play(); { *LYD*
+    //flaplyd.play(); { *LYD*
     //flaplyd.amp(1); *LYD*
   }
 }
@@ -54,4 +66,11 @@ void keyReleased() {
   if (!b.ready2flap) {
     b.ready2flap = true;
   }
+}
+
+void score() {
+  fill(0);
+  text(score, 230, 150);
+  textSize(50);
+  textMode(CENTER);
 }
