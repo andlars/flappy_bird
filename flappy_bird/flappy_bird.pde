@@ -1,3 +1,6 @@
+import processing.sound.*;
+SoundFile flaplyd;
+
 Bird b;
 Pipe p;
 PImage img;
@@ -28,8 +31,8 @@ void draw() {
     Pipes.add(new Pipe());
   }
  
-
-
+  flaplyd = new SoundFile (this, "flaplyd.mp3");
+ 
   //Game over når jorden rammes
   if (b.y >= height - b.s/2) {
     frameRate(0);
@@ -42,6 +45,9 @@ void draw() {
 void keyPressed() {
   if (key == ' ') {
     b.flap();
+    flaplyd.play(); {
+      flaplyd.amp(0.25);
+    }
   }
 }
 
