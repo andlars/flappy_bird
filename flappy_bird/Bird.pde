@@ -23,7 +23,7 @@ class Bird {
   }
 
   // Opdater fuglens position
-  void update() {
+  void update() { d
     dy += ddy;
     y += dy;
     
