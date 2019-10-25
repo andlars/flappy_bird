@@ -3,7 +3,7 @@ Pipe p;
 PImage base, redbird, bgnight;
 
 void setup() {
-  size(500, 800);
+  size(288, 512);
   noStroke();
   base = loadImage("base.png");
   redbird = loadImage("redbird-midflap.png");
