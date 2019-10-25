@@ -11,7 +11,7 @@
     x = 150;
     y = height/2;
     dy = 0;
-    ddy = 0.3;
+    ddy = 0.5;
     s = 50;
     ready2flap = true;
     fugl = loadImage("fugl.png");
@@ -46,6 +46,7 @@
   // Bask med vingerne
   void flap() {
     if(ready2flap) {
+      dy=0;
       dy += -10;
       ready2flap = false;
     } 
