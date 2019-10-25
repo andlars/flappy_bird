@@ -72,5 +72,4 @@ void score() {
   fill(0);
   text(score, 230, 150);
   textSize(50);
-  textMode(CENTER);
 }
