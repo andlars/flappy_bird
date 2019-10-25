@@ -19,14 +19,14 @@ class Bird {
     fill(255, 255, 255, 0);
     ellipse(x, y, s, s);
     imageMode(CENTER);
-    image(redbird, x, y, s-10, s); 
+    image(redbird, x, y, s-10, s);
   }
 
   // Opdater fuglens position
-  void update() { d
+  void update() {
     dy += ddy;
     y += dy;
-    
+
     if (y >= height-s/2) {
       y = height - s/2;
       dy = 0;
@@ -35,7 +35,7 @@ class Bird {
 
   // Bask med vingerne
   void flap() {
-    if(ready2flap) {
+    if (ready2flap) {
       dy += -10;
       ready2flap = false;
     }
