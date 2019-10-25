@@ -19,6 +19,15 @@ void draw() {
   p2.render();
   p.update();
   p2.update();
+  
+ if (b.x + b.s/2 > p.x && b.x - b.s/2 < p.x + p.w && (b.y + b.s/2 < p.y || b.y > p.y + p.h)) {
+   p.dx = 0;
+   p2.dx = 0;
+ }
+ if (b.x + b.s/2 > p2.x && b.x - b.s/2 < p2.x + p2.w && (b.y + b.s/2 < p2.y || b.y > p2.y + p2.h)) {
+   p.dx = 0;
+   p2.dx = 0;
+ }
 }
 
 void keyPressed() {
@@ -33,3 +42,6 @@ void keyReleased() {
     b.ready2flap = true;
   }
 }
+
+// void checkCollision() {
+//}
