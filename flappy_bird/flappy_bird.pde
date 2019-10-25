@@ -18,34 +18,38 @@ void setup() {
 void draw() {
   imageMode(CENTER);
   image(img, width/2, height/2);
-  
+
   b.render();
   b.update();
-  
-  for (Pipe p: Pipes) {
-  p.render();
-  p.update();
+
+  for (Pipe p : Pipes) {
+    p.render();
+    p.update();
   }
-  
+
   if (frameCount % 175 == 0) {
     Pipes.add(new Pipe());
   }
- 
- // flaplyd = new SoundFile (this, "flaplyd.mp3"); *LYD*
- 
+
+  // flaplyd = new SoundFile (this, "flaplyd.mp3"); *LYD*
+
   //Game over når jorden rammes
-  if (b.y >= height - b.s/2) {
+  if (b.y >= height - b.s/2 || p.hit(b) == true) {
     frameRate(0);
     textAlign(CENTER);
     textSize(40);
     text("GAME OVER", width/2, height/2);
+  }
+  
+  if (p.hit(b) == true) {
+  rect(400, 400, width/2, height/2);
   }
 }
 
 void keyPressed() {
   if (key == ' ') {
     b.flap();
-  //flaplyd.play(); { *LYD*
+    //flaplyd.play(); { *LYD*
     //flaplyd.amp(1); *LYD*
   }
 }
