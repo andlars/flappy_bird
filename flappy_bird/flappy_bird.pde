@@ -1,5 +1,5 @@
-import processing.sound.*;
-SoundFile flaplyd;
+// import processing.sound.*; *LYD*
+// SoundFile flaplyd; *LYD*
 
 Bird b;
 Pipe p;
@@ -31,7 +31,7 @@ void draw() {
     Pipes.add(new Pipe());
   }
  
-  flaplyd = new SoundFile (this, "flaplyd.mp3");
+ // flaplyd = new SoundFile (this, "flaplyd.mp3"); *LYD*
  
   //Game over når jorden rammes
   if (b.y >= height - b.s/2) {
@@ -45,8 +45,8 @@ void draw() {
 void keyPressed() {
   if (key == ' ') {
     b.flap();
-    flaplyd.play(); {
-      flaplyd.amp(1);
+  //flaplyd.play(); { *LYD*
+    //flaplyd.amp(1); *LYD*
     }
   }
 }
@@ -54,6 +54,5 @@ void keyPressed() {
 void keyReleased() {
   if (!b.ready2flap) {
     b.ready2flap = true;
-    
   }
 }
