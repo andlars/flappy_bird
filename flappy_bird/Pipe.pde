@@ -6,9 +6,9 @@ class Pipe {
   float h; // Hullets størrelse
 
   // Constructor til nye pipes
-  Pipe() {
-    x = width-100;
-    dx = 0;
+  Pipe(int X) {
+    x = X;
+    dx = -2;
     w = 30;
     y = height/2-75;
     h = 150;
@@ -23,8 +23,10 @@ class Pipe {
 
   // Opdater rørets position
   void update() {
-    if (frameRate >= 0) {
-      x = p.x - 2;
+    x+= dx;
+    if (outOfCanvas() == true) {
+      x = width;
+      y = random(150, 650);
     }
   }
 
