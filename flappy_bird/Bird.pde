@@ -33,8 +33,13 @@ class Bird {
       y = height - s/2;
       dy = 0;
     }
-    if (dist(x, 0, p.x + p.w/2, 0) <= 1 || dist(x, 0, p2.x + p2.w/2, 0) <= 1) {
+    if ((p.x < x && p.withPoint == true)) {
       score += 1;
+      p.withPoint = false;
+    }
+    if ((p2.x < x && p2.withPoint == true)) {
+      score += 1;
+      p2.withPoint = false;
     }
   }
 

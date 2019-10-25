@@ -4,6 +4,7 @@ class Pipe {
   float w; // Rørets bredde
   float y; // Hullets øvre position
   float h; // Hullets størrelse
+  boolean withPoint; 
 
   // Constructor til nye pipes
   Pipe(int X) {
@@ -12,6 +13,7 @@ class Pipe {
     w = 30;
     y = height/2-75;
     h = 150;
+    withPoint = true;
   }
 
   // Afbild røret på canvasset
@@ -27,6 +29,7 @@ class Pipe {
     if (outOfCanvas() == true) {
       x = width;
       y = random(150, 650);
+      withPoint = true;
     }
   }
 
