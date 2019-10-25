@@ -23,6 +23,9 @@ class Pipe {
 
   // Opdater rørets position
   void update() {
+    if (frameRate >= 0) {
+      x = p.x - 2;
+    }
   }
 
   // Metode, der tjekker om røret er

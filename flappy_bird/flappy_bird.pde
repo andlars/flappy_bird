@@ -17,8 +17,17 @@ void draw() {
   b.render();
   b.update();
   p.render();
+  
+  if (frameCount % 175 == 0) {
+    p = new Pipe();
+  }
+  
   image(base, 0, height-112/2, 336, 112);
   image(base, 336, height-112/2, 336, 112);
+  
+  if (frameRate >= 0) {
+      p.x = p.x - 2;
+    }
 }
 
 
