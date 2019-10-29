@@ -14,7 +14,7 @@
     ddy = 0.5;
     s = 50;
     ready2flap = true;
-    fugl = loadImage("redbird-downflap.png");
+    fugl = loadImage("sprites/redbird-downflap.png");
     rot = 0;
   }
 
