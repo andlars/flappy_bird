@@ -47,7 +47,7 @@ void draw() {
   if (b.y >= height - b.s/2 || p.hit(b) == true) {
     frameRate(0);
     textAlign(CENTER);
-    textSize(40);
+    textSize(50);
     text("GAME OVER", width/2, height/2);
   }
 
@@ -62,8 +62,6 @@ void draw() {
   text(score, width/2 + 3, 200 + 3);
   fill(255);
   text(score, width/2, 200);
-
-
 }
 
 void keyPressed() {
