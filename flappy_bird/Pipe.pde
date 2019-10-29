@@ -16,7 +16,7 @@ class Pipe {
     dx = -2;
     w = 50;
     y = height/2-75;
-    y2 = -height*2;
+    y2 = -height*2+75;
     h = 150;
     
     pipegreen = loadImage("pipe-green.png");
@@ -38,7 +38,7 @@ class Pipe {
     if (outOfCanvas() == true) {
       x = width;
       y = random(150, 650); 
-      y2 = random(650, 150);
+      y2 = random(150, 650);
       pipecolor = (int)random(2);
     }
     
@@ -52,7 +52,7 @@ class Pipe {
     for (int i=0; i<PipeArrayUp.length; i++){
       PipeArrayUp [0] = pipegreenFlip;
       PipeArrayUp [1] = piperedFlip;
-    image(PipeArrayUp [pipecolor], x-5, y2+150, w+10, -height-y2-h);
+    image(PipeArrayUp [pipecolor], x-5, 0, w+10, y+2);
     }
   }
 
