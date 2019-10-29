@@ -9,30 +9,29 @@ class Pipe {
   // Constructor til nye pipes
   Pipe() {
     x = width;
-    dx = 0;
-    w = 30;
+    dx = 2;
+    w = 52;
     y = random(40, 450);
-    h = 150;
-    ned = loadImage("pipeNed.png");
-    op = loadImage("pipeOp.png");
+    h = 200;
+    ned = loadImage("sprites/pipe-green-down.png");
+    op = loadImage("sprites/pipe-green-up.png");
+
   }
 
 
   // Afbild røret på canvasset
   void render() {
-    fill(255);
+    fill(255, 255, 255, 0);
     rect(x, 0, w, y);
     rect(x, y+h, w, height-y-h);
     imageMode(CENTER);
-    image(ned, x, y - 376/2);
-    image(op, x, y + h + 376/2);
+    image(ned, x+w/2, y - 600/2);
+    image(op, x+w/2, y + h + 600/2);
   }
 
   // Opdater rørets position
   void update() {
-    if (frameRate >= 0) {
-      x = x - 2;
-    }
+      x = x - dx;
   }
 
   // Metode, der tjekker om røret er
