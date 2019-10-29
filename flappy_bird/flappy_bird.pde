@@ -1,10 +1,15 @@
 Bird b;
 Pipe p;
 Pipe p2;
+PImage bg, base;
+int y;
 
 void setup() {
   size(500, 800);
   noStroke();
+  bg = loadImage ("background-day.png");
+  base = loadImage ("base.png");
+  
 
   b = new Bird();
   p = new Pipe(width+100);
@@ -12,7 +17,9 @@ void setup() {
 }
 
 void draw() {
-  background(0);
+  image(bg,0,0, width, height);
+  base = loadImage ("base.png");
+  
   b.render();
   b.update();
   p.render();
