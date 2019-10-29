@@ -2,7 +2,7 @@ class Pipe {
   float x; // Rørets position
   float dx; // Rørets hastighed
   float w; // Rørets bredde
-  float y, y2; // Hullets øvre position
+  float y; // Hullets øvre position
   float h; // Hullets størrelse
   PImage[] PipeArray = new PImage[2];
   PImage[] PipeArrayUp = new PImage[2];
@@ -16,7 +16,6 @@ class Pipe {
     dx = -2;
     w = 50;
     y = height/2-75;
-    y2 = -height*2+75;
     h = 150;
     
     pipegreen = loadImage("pipe-green.png");
@@ -38,7 +37,6 @@ class Pipe {
     if (outOfCanvas() == true) {
       x = width;
       y = random(150, 650); 
-      y2 = random(150, 650);
       pipecolor = (int)random(2);
     }
     
