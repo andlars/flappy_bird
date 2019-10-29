@@ -10,7 +10,7 @@ class Bird {
     x = width/2;
     y = height/2;
     dy = 0;
-    ddy = 0.3;
+    ddy = 0.33;
     s = 50;
     ready2flap = true;
     score = 0;
@@ -46,7 +46,7 @@ class Bird {
   // Bask med vingerne
   void flap() {
     if(ready2flap) {
-      dy += -7;
+      dy += -6.75;
       ready2flap = false;
     }
   }
