@@ -10,7 +10,7 @@ class Pipe {
   Pipe(int X) {
     x = X;
     dx = -2;
-    w = 30;
+    w = 60;
     y = height/2-75;
     h = 150;
   }
@@ -22,8 +22,8 @@ class Pipe {
     fill(255, 0, 0, 0);
     rect(x, y+h, w, height-y-h);
     imageMode(CORNER);
-    image(greenpipe, x, y+h);
-    image(greenpipe2, x, 0);
+    image(greenpipe, x, y+h, w, height-y-h);
+    image(greenpipe2, x, 0, w, y);
   }
 
   // Opdater rørets position
