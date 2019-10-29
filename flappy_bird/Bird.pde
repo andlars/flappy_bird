@@ -39,7 +39,7 @@ class Bird {
   void flap() {
     if (ready2flap) {
       dy=0;
-      dy =+ -10;
+      dy =+ -5;
       ready2flap = false;
     }
   }
