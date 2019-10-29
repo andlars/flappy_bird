@@ -23,16 +23,16 @@
     fill(255);
     translate(x, y);
     imageMode(CENTER);
-   // rotate(radians(rot));
+    rotate(radians(rot));
     image(fugl, 0, 0);
     fugl.resize(45, 35);
-    //rotate(TWO_PI - radians(rot));
+    rotate(TWO_PI - radians(rot));
     translate(-x, -y);
   }
 
   // Opdater fuglens position
   void update() {
-    dy += ddy;
+    dy += ddy; 
     y += dy;
         
     if (y >= height-120) {
@@ -40,7 +40,7 @@
       dy = 0;
     }
     
-    //rot = rot + map(dy + ddy, -200, 200, -45, 45);
+    rot = rot + map(dy , -200, 200, -45, 45);
   }
 
   // Bask med vingerne
