@@ -25,6 +25,7 @@
     imageMode(CENTER);
    // rotate(radians(rot));
     image(fugl, 0, 0);
+    fugl.resize(45, 35);
     //rotate(TWO_PI - radians(rot));
     translate(-x, -y);
   }
