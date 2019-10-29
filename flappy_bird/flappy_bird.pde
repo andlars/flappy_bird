@@ -1,3 +1,6 @@
+ // import processing.sound.*; *LYD*
+// SoundFile flaplyd; *LYD*
+
 Bird b;
 Pipe p;
 PImage img;
@@ -54,7 +57,7 @@ void draw() {
   if (p.hit(b) == true) {
     rect(400, 400, width/2, height/2);
   }
-  
+
   textAlign(CENTER);
   textSize(48);
   textFont(kremlin);
