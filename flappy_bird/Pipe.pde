@@ -13,7 +13,7 @@ class Pipe {
   // Constructor til nye pipes
   Pipe(int X) {
     x = X;
-    dx = -2;
+    dx = -2.01;
     w = 50;
     y = height/2-75;
     h = 150;
