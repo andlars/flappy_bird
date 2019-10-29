@@ -1,20 +1,24 @@
 Bird b;
 Pipe p;
 Pipe p2;
+PImage bg, base;
+int y;
 boolean jump;
 
 void setup() {
   size(500, 800);
   noStroke();
-
+  bg = loadImage ("background-day.png");
+  base = loadImage ("base.png");
   b = new Bird();
   p = new Pipe(width+100);
   p2 = new Pipe(width+370);
-  jump = true;
+   jump = true;
 }
 
 void draw() {
-  background(0);
+  image(bg,0,0, width, height);
+  base = loadImage ("base.png");
   b.render();
   b.update();
   p.render();
@@ -47,10 +51,8 @@ void draw() {
 
 void keyPressed() {
   if (key == ' ') {
-    if (jump == true) {
     b.dy = 0;
     b.flap();
-    } 
   }
 }
 
@@ -59,6 +61,3 @@ void keyReleased() {
     b.ready2flap = true;
   }
 }
-
-// void checkCollision() {
-//}

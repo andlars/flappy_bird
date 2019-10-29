@@ -1,11 +1,20 @@
 Her tænker jeg bare, at vi skriver eventuelle sprints og opgaver som vi hver især vil tilføje til programmet.
 
 Sprint 1
-Få bolden til at være i midten af canvas
-Få rørene til at bevæge sig mod venste med en passende hastighed
-Lave flere rør, som skal komme med en passende afstand + random hul i rør
-Lave realistiske hop på bolden
+Få bolden til at være i midten af canvas (Ida K)
+Få rørene til at bevæge sig mod venste med en passende hastighed (Ida K)
+Lave flere rør, som skal komme med en passende afstand + random hul i rør (Ida K)
+Lave realistiske hop på bolden (Ida K)
 
 Sprint 2
-Lave en pointtæller, som tæller op når bolden er igennem røret
-Reset ved kollosion
+Lave en pointtæller, som tæller op når bolden er igennem røret (Ida K)
+Stop ved kollosion (Ida K)
+Lave grafik på rør (Magnus)
+Lave grafik baggrund (Ida C)
+Lave grafik på fuglen (Sang)
+
+Sprint 3
+Lave en "game over"-skærm
+
+Sprint 4
+Fikse bugs

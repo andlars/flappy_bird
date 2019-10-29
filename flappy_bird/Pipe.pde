@@ -24,7 +24,6 @@ class Pipe {
     pipered = loadImage("pipe-red.png");
     pipegreenFlip = loadImage("pipe-green-mirror.png");
     piperedFlip = loadImage("pipe-red-mirror.png");
-
   }
 
   // Afbild røret på canvasset
@@ -55,7 +54,6 @@ class Pipe {
       PipeArrayUp [0] = pipegreenFlip;
       PipeArrayUp [1] = piperedFlip;
     image(PipeArrayUp [pipecolor], x-5, 0, w+10, y+2);
-
     }
   }
 

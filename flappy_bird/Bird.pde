@@ -5,7 +5,7 @@ class Bird {
   boolean ready2flap;
   int score;
 
-  // Constructor til nye fugle
+     // Constructor til nye fugle
   Bird() {
     x = width/2;
     y = height/2;
@@ -51,3 +51,4 @@ class Bird {
     }
   }
 }
+
