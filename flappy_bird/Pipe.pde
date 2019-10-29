@@ -8,6 +8,7 @@ class Pipe {
   PImage[] PipeArrayUp = new PImage[2];
   int pipecolor;
   PImage pipegreen, pipered, pipegreenFlip, piperedFlip;
+  boolean withPoint;
   
   
   // Constructor til nye pipes
@@ -15,13 +16,15 @@ class Pipe {
     x = X;
     dx = -2.01;
     w = 50;
-    y = height/2-75;
+    y = int(random(150, 650));
     h = 150;
+    withPoint = true;
     
     pipegreen = loadImage("pipe-green.png");
     pipered = loadImage("pipe-red.png");
     pipegreenFlip = loadImage("pipe-green-mirror.png");
     piperedFlip = loadImage("pipe-red-mirror.png");
+
   }
 
   // Afbild røret på canvasset
@@ -37,6 +40,7 @@ class Pipe {
     if (outOfCanvas() == true) {
       x = width;
       y = random(150, 650); 
+      withPoint = true;
       pipecolor = (int)random(2);
     }
     
@@ -51,6 +55,7 @@ class Pipe {
       PipeArrayUp [0] = pipegreenFlip;
       PipeArrayUp [1] = piperedFlip;
     image(PipeArrayUp [pipecolor], x-5, 0, w+10, y+2);
+
     }
   }
 
