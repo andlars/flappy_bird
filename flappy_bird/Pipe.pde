@@ -11,7 +11,7 @@ class Pipe {
     x = X;
     dx = -2;
     w = 30;
-    y = height/2-75;
+    y = int(random(150, 650));
     h = 150;
     withPoint = true;
   }
