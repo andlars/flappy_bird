@@ -1,4 +1,4 @@
-// import processing.sound.*; *LYD*
+ // import processing.sound.*; *LYD*
 // SoundFile flaplyd; *LYD*
 
 Bird b;
