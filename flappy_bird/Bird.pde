@@ -14,7 +14,7 @@
     ddy = 0.5;
     s = 50;
     ready2flap = true;
-    fugl = loadImage("fugl.png");
+    fugl = loadImage("redbird-downflap.png");
     rot = 0;
   }
 
@@ -22,7 +22,6 @@
   void render() {
     fill(255);
     translate(x, y);
-    ellipse(0, 0, s, s);
     imageMode(CENTER);
    // rotate(radians(rot));
     image(fugl, 0, 0);
