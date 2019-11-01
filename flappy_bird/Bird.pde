@@ -4,9 +4,11 @@ class Bird {
   float s; // Fuglens størrelse
   boolean ready2flap;
   int score;
+  PImage bird;
 
      // Constructor til nye fugle
   Bird() {
+    bird = loadImage("yellowbird-midflap.png");
     x = width/2;
     y = height/2;
     dy = 0;
@@ -20,7 +22,7 @@ class Bird {
   // Afbild fuglen ved dens nuværende position
   void render() {
     fill(255);
-    ellipse(x, y, s, s);
+    image(bird,x, y);
     text(score, width/2, 50);
   }
 
@@ -51,4 +53,3 @@ class Bird {
     }
   }
 }
-
