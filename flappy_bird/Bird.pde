@@ -11,7 +11,7 @@ class Bird {
     bird = loadImage("yellowbird-midflap.png");
     x = width/2;
     y = height/2;
-    dy = 0;
+    dy = 0;        
     ddy = 0.33;
     s = 50;
     ready2flap = true;
@@ -23,7 +23,7 @@ class Bird {
   void render() {
     fill(255);
     image(bird,x, y);
-    text(score, width/2, 50);
+    text(score,width/2, 50);
   }
 
   // Opdater fuglens position
